@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js (pie chart for expenses) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>📊 Finance Tracker</h1>
+
+    <!-- ==== ADD TRANSACTION FORM ==== -->
+    <section class="form-section">
+      <h2>Add a transaction</h2>
+      <form id="txnForm">
+        <label>Date
+          <input type="date" name="date" required>
+        </label>
+        <label>Type
+          <select name="type" required>
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+          </select>
+        </label>
+        <label>Category
+          <input type="text" name="category" placeholder="e.g. Salary, Food" required>
+        </label>
+        <label>Description (optional)
+          <input type="text" name="description" placeholder="e.g. Lunch at work">
+        </label>
+        <label>Amount
+          <input type="number" name="amount" step="0.01" min="0" required>
+        </label>
+        <button type="submit">Save</button>
+        <p id="formStatus" class="status"></p>
+      </form>
+    </section>
+
+    <!-- ==== SUMMARY CARD ==== -->
+    <section class="summary-section">
+      <h2>Summary</h2>
+      <div class="summary-cards">
+        <div class="card" id="totalIncome">Income: $0.00</div>
+        <div class="card" id="totalExpense">Expense: $0.00</div>
+        <div class="card" id="balance">Balance: $0.00</div>
+      </div>
+    </section>
+
+    <!-- ==== TRANSACTION LIST ==== -->
+    <section class="list-section">
+      <h2>All transactions</h2>
+      <table id="txnTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ==== EXPENSE‑BY‑CATEGORY CHART ==== -->
+    <section class="chart-section">
+      <h2>Expenses by Category</h2>
+      <canvas id="expenseChart" width="400" height="400"></canvas>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
