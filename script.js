@@ -3,7 +3,7 @@
    -------------------------------------------------------------- */
 
 /* ---- 1️⃣  UPDATE THIS WITH YOUR DEPLOYED URL ---- */
-const API_URL = 'https://script.google.com/macros/s/AKfycbzvKucExx8v_HKRk1scXohkuTOjEH9iRrINUgX7kgv7H8Z10oiBMsuJRr3TistKiz8s/exec';
+const API_URL = 'https://script.google.com/macros/s/1RuZe1do44nQq5c4IU8ZWFpe3hGxX2MKCgnsCL3F75we7me8krW2E3mSi/exec';
 /* -------------------------------------------------- */
 
 async function fetchJSON(url, options = {}) {
